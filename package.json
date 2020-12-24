@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.5.0",
+    "node-sass": "4.12",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
@@ -30,6 +31,7 @@
     "react-markdown": "^4.3.1"
   },
   "devDependencies": {
+    "gatsby-plugin-scss-typescript": "^4.0.13",
     "prettier": "2.0.5"
   },
   "repository": {

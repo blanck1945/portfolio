@@ -1,6 +1,15 @@
 import React from "react"
 import { FaCode, FaSketch, FaAndroid } from "react-icons/fa"
-export default [
+import { IconType } from "react-icons"
+
+export interface ServiceInterface {
+  id: number
+  icon: any
+  title: string
+  text: string
+}
+
+export const services: ServiceInterface[] = [
   {
     id: 1,
     icon: <FaCode className="service-icon" />,

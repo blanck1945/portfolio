@@ -14,10 +14,12 @@ module.exports = {
     siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
   },
   plugins: [
+    `gatsby-plugin-scss-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,7 +35,7 @@ module.exports = {
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [],
+        contentTypes: [`jobs`, `projects`],
         singleTypes: [],
       },
     },

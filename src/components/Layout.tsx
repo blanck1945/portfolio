@@ -1,12 +1,18 @@
 import React from "react"
-// import "../css/main.css"
+import "../css/main.css"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
-const Layout = ({ children }) => {
+
+interface LayoutProps {
+  children: any
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <h2>layout component</h2>
+      <Navbar />
+      {children}
     </>
   )
 }
