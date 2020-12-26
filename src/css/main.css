@@ -759,7 +759,7 @@ Projects
 }
 
 .project-desc {
-  word-spacing: 15px;
+  word-spacing: 7px;
   color: var(--clr-grey-3);
 }
 
@@ -1168,8 +1168,16 @@ Blog Template
   border-radius: var(--radius);
 }
 
+.blog-template p {
+  display: flex;
+  margin: 4% 0;
+  align-items: center;
+  justify-content: center;
+}
+
 .blog-template img {
-  width: 15rem;
-  height: 15rem;
-  margin: 3rem 0;
+  width: 22rem;
+  border-radius: 8px;
+  height: 16rem;
+  margin: 3rem;
 }

@@ -1,11 +1,41 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
-const Blog = () => {
-  return <h2>blog component</h2>
+import { BlogInterface } from "./Blogs"
+
+interface BlogProps {
+  blog: BlogInterface
 }
 
-Blog.propTypes = {}
+const Blog = ({ blog }: BlogProps) => {
+  const {
+    id,
+    title,
+    content,
+    date,
+    slug,
+    category,
+    desc,
+    image: {
+      childImageSharp: { fluid },
+    },
+  } = blog
+
+  return (
+    <Link to={`/blogs/${slug}`} className="blog" key={id}>
+      <article>
+        <Image fluid={fluid} alt="blog-img" className="blog-img" />
+        <div className="blog-card">
+          <h4>{title}</h4>
+          <p>{desc.substring(0, 120) + "..."}</p>
+          <div className="blog-footer">
+            <p>{category}</p>
+            <p>{date}</p>
+          </div>
+        </div>
+      </article>
+    </Link>
+  )
+}
 
 export default Blog
